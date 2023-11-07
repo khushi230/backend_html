@@ -75,6 +75,7 @@ const gridContainer = document.getElementById("grid-container");
 valuesArray.forEach((item) => {
   const box = document.createElement("div");
   box.className = "box";
+  box.id=item.id;
   box.textContent = item.label;
   gridContainer.appendChild(box);
 });
