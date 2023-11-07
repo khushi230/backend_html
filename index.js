@@ -6,6 +6,9 @@ const textfield = document.getElementById("popup-textfield");
 const logsButton = document.getElementById("viewLogs-button");
 const logsContainer = document.getElementById("logs-container");
 const otherContainer = document.getElementById("value-container");
+const browseButton = document.getElementById("browse-button");
+const fileInput = document.getElementById("file-input");
+const uploadButton = document.getElementById("upload-button");
 
 // Data for the dropdown options,
 const data1 = ["Option 1", "Option 2", "Option 3", "Option 4"];
@@ -102,6 +105,18 @@ const cancelIcon = logsContainer.querySelector("#cancel-icon");
 cancelIcon.addEventListener("click", () => {
   logsContainer.style.display = "none";
   otherContainer.style.display = "block";
+});
+
+browseButton.addEventListener("click", () => {
+  fileInput.click(); // Trigger the file input when the "Browse" button is clicked
+});
+
+fileInput.addEventListener("change", () => {
+  if (fileInput.files.length > 0) {
+    uploadButton.style.display = "block";
+  } else {
+    uploadButton.style.display = "none";
+  }
 });
 
 populateDropdown("select1", data1);
