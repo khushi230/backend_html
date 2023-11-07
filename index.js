@@ -59,31 +59,34 @@ function populateDropdown(selectId, data) {
   });
 }
 
-populateDropdown("select1", data1);
-
-populateDropdown("select2", data2);
-
-populateDropdown("select3", data3);
 
 function disableElementById(id) {
   document.getElementById(id).disabled = true;
 }
 
-const gridContainer = document.getElementById("grid-container");
+function populateValues(valuesArray) {
+  const gridContainer = document.getElementById("grid-container");
 
-// Loop through the array and create boxes
-valuesArray.forEach((item) => {
-  const box = document.createElement("div");
-  box.className = "box";
-  box.id=item.id;
-  box.textContent = item.label;
-  gridContainer.appendChild(box);
-});
+  // Loop through the array and create boxes
+  valuesArray.forEach((item) => {
+    const box = document.createElement("div");
+    box.className = "box";
+    box.id = item.id;
+    box.textContent = item.label;
+    gridContainer.appendChild(box);
+  });
+}
 
 function changeColorById(id) {
   document.getElementById(id).style.backgroundColor = "#b0c4b1";
   document.getElementById(id).style.color = "#386641";
 }
+
+populateDropdown("select1", data1);
+populateDropdown("select2", data2);
+populateDropdown("select3", data3);
+
+populateValues(valuesArray);
 
 disableElementById("dsn");
 changeColorById("id1");
