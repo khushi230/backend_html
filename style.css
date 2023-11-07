@@ -107,3 +107,27 @@ h4 {
   width: 100px;
   border-radius: 5px;
 }
+
+#print-button {
+  padding: 5px;
+  margin: 10px auto;
+  border: none;
+  background-color: #ccc;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.grid {
+  margin: 10px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 5px;
+}
+.box {
+  border-radius: 5px;
+  background-color: #edafb8;
+  padding: 10px;
+  text-align: center;
+  color: #d90429;
+}

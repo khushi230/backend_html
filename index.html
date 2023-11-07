@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Project Page</title>
-    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -14,19 +13,12 @@
         <button id="submit-button">Submit</button>
       </div>
     </div>
-    <div
-      style="
-        height: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 2px;
-      "
-    >
-      Logs
-    </div>
 
     <div class="container">
       <div class="form">
+        <h4 class="dropdown-text">Upload Excel</h4>
+        <button id="browse-button" class="openButton">Browse</button>
+
         <div>
           <h4 class="dropdown-text">Comport</h4>
           <select id="select1" class="dropdowns"></select>
@@ -39,22 +31,16 @@
         </div>
 
         <div>
-          <h4 class="dropdown-text">Serial No.</h4>
-          <input class="dropdowns" />
+          <h4 class="dropdown-text">Sim Provider</h4>
+          <input id="sim-provider" class="dropdowns" />
         </div>
 
         <div>
-          <h4 class="dropdown-text">Version</h4>
+          <h4 class="dropdown-text">Device Serial No.</h4>
 
-          <input class="dropdowns" />
+          <input id="dsn" class="dropdowns" />
         </div>
-
-        <div>
-          <h4 class="dropdown-text">Sim Type</h4>
-          <input class="dropdowns" />
-        </div>
-
-        <button class="openButton">Open</button>
+        <button id="open-button" class="openButton">Open</button>
 
         <div>
           <h4 class="dropdown-text">Commands</h4>
@@ -72,7 +58,8 @@
               +
             </button>
           </div>
-          <button class="openButton">Send</button>
+          <button id="send-button" class="openButton">Send</button>
+          <button id="viewLogs-button" class="openButton">View Logs</button>
         </div>
       </div>
       <div style="width: 100%; margin: 10px; padding: 10px">
@@ -96,9 +83,12 @@
             <h4 style="margin: 5px">--------------</h4>
           </div>
         </div>
+        <div class="grid" id="grid-container"></div>
+
+      <div style="text-align: center;"> 
+       <button id="print-button"  >Print</button>
+      </div>  
       </div>
-    </div>
-    <script src="./js/bootstrap.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
