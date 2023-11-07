@@ -3,6 +3,9 @@ const addButton = document.getElementById("add-button");
 const closeButton = document.getElementById("close-button");
 const submitButton = document.getElementById("submit-button");
 const textfield = document.getElementById("popup-textfield");
+const logsButton = document.getElementById("viewLogs-button");
+const logsContainer = document.getElementById("logs-container");
+const otherContainer = document.getElementById("value-container");
 
 // Data for the dropdown options,
 const data1 = ["Option 1", "Option 2", "Option 3", "Option 4"];
@@ -59,7 +62,6 @@ function populateDropdown(selectId, data) {
   });
 }
 
-
 function disableElementById(id) {
   document.getElementById(id).disabled = true;
 }
@@ -82,9 +84,21 @@ function populateHeaderValues(id, value) {
 }
 
 function changeColorById(id) {
-  document.getElementById(id).style.backgroundColor = "#b0c4b1";
-  document.getElementById(id).style.color = "#386641";
+  document.getElementById(id).style.backgroundColor = "#b7efc5";
+  document.getElementById(id).style.color = "#155d27";
 }
+
+logsButton.addEventListener("click", () => {
+  logsContainer.style.display = "block";
+  otherContainer.style.display = "none";
+});
+
+// Hide the "Logs" container and show the "Other" container when the cancel icon is clicked
+const cancelIcon = logsContainer.querySelector("#cancel-icon");
+cancelIcon.addEventListener("click", () => {
+  logsContainer.style.display = "none";
+  otherContainer.style.display = "block";
+});
 
 populateDropdown("select1", data1);
 populateDropdown("select2", data2);
