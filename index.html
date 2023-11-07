@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Page</title>
+    <!-- <link rel="stylesheet" href="./css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <button class="close-button" id="close-button">&times;</button>
+        <input type="text" id="popup-textfield" placeholder="Enter text" />
+        <button id="submit-button">Submit</button>
+      </div>
+    </div>
+    <div
+      style="
+        height: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+      "
+    >
+      Logs
+    </div>
+
+    <div class="container">
+      <div class="form">
+        <div>
+          <h4 class="dropdown-text">Comport</h4>
+          <select id="select1" class="dropdowns"></select>
+        </div>
+
+        <div>
+          <h4 class="dropdown-text">Baudrate</h4>
+
+          <select id="select2" class="dropdowns"></select>
+        </div>
+
+        <div>
+          <h4 class="dropdown-text">Serial No.</h4>
+          <input class="dropdowns" />
+        </div>
+
+        <div>
+          <h4 class="dropdown-text">Version</h4>
+
+          <input class="dropdowns" />
+        </div>
+
+        <div>
+          <h4 class="dropdown-text">Sim Type</h4>
+          <input class="dropdowns" />
+        </div>
+
+        <button class="openButton">Open</button>
+
+        <div>
+          <h4 class="dropdown-text">Commands</h4>
+          <div style="display: flex">
+            <select id="select3" class="dropdowns"></select
+            ><button
+              id="add-button"
+              style="
+                color: gray;
+                border: none;
+                background-color: transparent;
+                font-size: larger;
+              "
+            >
+              +
+            </button>
+          </div>
+          <button class="openButton">Send</button>
+        </div>
+      </div>
+      <div style="width: 100%; margin: 10px; padding: 10px">
+        <div style="display: flex; margin: 10px 0px">
+          <div style="display: flex; margin-right: 20px">
+            <h4 style="margin: 5px">IMEI:</h4>
+            <h4 style="margin: 5px">--------------</h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="margin: 5px">ICCID:</h4>
+            <h4 style="margin: 5px">--------------</h4>
+          </div>
+        </div>
+        <div style="display: flex">
+          <div style="display: flex; margin-right: 20px">
+            <h4 style="margin: 5px">GSM Signal:</h4>
+            <h4 style="margin: 5px">--------------</h4>
+          </div>
+          <div style="display: flex">
+            <h4 style="margin: 5px">Version:</h4>
+            <h4 style="margin: 5px">--------------</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
