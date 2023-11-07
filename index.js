@@ -66,6 +66,10 @@ function disableElementById(id) {
   document.getElementById(id).disabled = true;
 }
 
+function enableElementById(id) {
+  document.getElementById(id).disabled = false;
+}
+
 function populateValues(valuesArray) {
   const gridContainer = document.getElementById("grid-container");
 
@@ -111,5 +115,4 @@ populateHeaderValues("version", "1.3.5");
 
 populateValues(valuesArray);
 
-disableElementById("dsn");
 changeColorById("id1");
