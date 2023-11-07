@@ -77,6 +77,10 @@ function populateValues(valuesArray) {
   });
 }
 
+function populateHeaderValues(id, value) {
+  document.getElementById(id).textContent = value;
+}
+
 function changeColorById(id) {
   document.getElementById(id).style.backgroundColor = "#b0c4b1";
   document.getElementById(id).style.color = "#386641";
@@ -85,6 +89,11 @@ function changeColorById(id) {
 populateDropdown("select1", data1);
 populateDropdown("select2", data2);
 populateDropdown("select3", data3);
+
+populateHeaderValues("imei", 123456789);
+populateHeaderValues("iccid", "ICCID_VALUE");
+populateHeaderValues("gsm-signal", "AIRTEL");
+populateHeaderValues("version", "1.3.5");
 
 populateValues(valuesArray);
 
