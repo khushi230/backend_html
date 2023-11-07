@@ -51,3 +51,7 @@ populateDropdown("select1", data1);
 populateDropdown("select2", data2);
 
 populateDropdown("select3", data3);
+
+function disableElementById(id) {
+  document.getElementById(id).disabled = true;
+}
