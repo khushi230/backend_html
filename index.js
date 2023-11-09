@@ -119,6 +119,38 @@ fileInput.addEventListener("change", () => {
   }
 });
 
+const logsArray = ["Log 1", "Log 2", "Log 3", "Log 4", "Log 5"];
+
+// function to append logs to the logs list and to display logs
+
+function appendLogs(logsArray) {
+  const logsList = document.getElementById("logs-list");
+
+  logsArray.forEach((item) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = item;
+    logsList.appendChild(listItem);
+    listItem.style.marginBottom = "10px";
+  });
+}
+// function to add new log to the logs array
+
+function addNewLogToLogsArray(newLog) {
+  logsArray.push(newLog);
+}
+
+addNewLogToLogsArray("Log 6");
+addNewLogToLogsArray("Log 7");
+addNewLogToLogsArray("Log 8");
+addNewLogToLogsArray("Log 9");
+addNewLogToLogsArray("Log 10");
+addNewLogToLogsArray(
+  "Log 11 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+);
+
+//call the function to display logs
+appendLogs(logsArray);
+
 populateDropdown("select1", data1);
 populateDropdown("select2", data2);
 populateDropdown("select3", data3);
