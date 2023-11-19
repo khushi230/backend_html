@@ -190,11 +190,11 @@ function displayToast(message) {
 }
 
 // Example: Call displayToast function with different messages
-// displayToast("This is an error message!");
-// setTimeout(() => {
-//   displayToast("Another error occurred!");
-//   displayToast("Yet another error!");
-// }, 2000); // Simulate a delay before showing multiple messages
-// setTimeout(() => {
-//   displayToast("And one more error!");
-// }, 5000); // Simulate a delay before showing the next message
+displayToast("This is an error message!");
+setTimeout(() => {
+  displayToast("Another error occurred!");
+  displayToast("Yet another error!");
+}, 2000); // Simulate a delay before showing multiple messages
+setTimeout(() => {
+  displayToast("And one more error!");
+}, 5000); // Simulate a delay before showing the next message
