@@ -183,3 +183,18 @@ h3 {
   color: white;
   padding: 10px;
 }
+
+#error-box {
+  margin: 10px;
+  color: red;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-left: dotted 2px #ccc;
+  overflow: auto;
+}
+
+.hidden {
+  display: none;
+}

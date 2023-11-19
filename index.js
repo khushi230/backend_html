@@ -163,3 +163,17 @@ populateHeaderValues("version", "1.3.5");
 populateValues(valuesArray);
 
 changeColorById("id1");
+
+function showError(message) {
+  const errorBox = document.getElementById("error-box");
+  errorBox.textContent = message;
+  errorBox.classList.remove("hidden");
+  errorBox.classList.add("red-text"); // Add red-text class for red color
+  setTimeout(function () {
+    errorBox.classList.add("hidden");
+    errorBox.classList.remove("red-text"); // Remove red-text class
+  }, 10000); // Hide the error after 10 seconds (10000 milliseconds)
+}
+
+// Call showError function with an error message automatically
+showError("This is an error message!");
