@@ -184,17 +184,18 @@ h3 {
   padding: 10px;
 }
 
-#error-box {
+.toast {
   margin: 10px;
   color: red;
   border-radius: 5px;
-  width: 30%;
-  padding: 10px;
+  width: 95%;
+  padding: 5px;
   box-sizing: border-box;
-  border-left: dotted 2px #ccc;
-  overflow: auto;
 }
 
-.hidden {
-  display: none;
+.toast.show {
+  opacity: 1;
+}
+#toast-container {
+  border-left: dotted 2px #ccc;
 }

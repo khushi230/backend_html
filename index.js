@@ -164,16 +164,37 @@ populateValues(valuesArray);
 
 changeColorById("id1");
 
-function showError(message) {
-  const errorBox = document.getElementById("error-box");
-  errorBox.textContent = message;
-  errorBox.classList.remove("hidden");
-  errorBox.classList.add("red-text"); // Add red-text class for red color
-  setTimeout(function () {
-    errorBox.classList.add("hidden");
-    errorBox.classList.remove("red-text"); // Remove red-text class
-  }, 10000); // Hide the error after 10 seconds (10000 milliseconds)
+function displayToast(message) {
+  const toastContainer = document.getElementById("toast-container");
+
+  const toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.textContent = message;
+
+  toastContainer.appendChild(toast);
+
+  // Show the toast
+  setTimeout(() => {
+    toast.classList.add("show");
+  }, 100);
+
+  // Hide the toast after 10 seconds
+  setTimeout(() => {
+    toast.classList.remove("show");
+
+    // Remove the toast element from the DOM after transition
+    setTimeout(() => {
+      toast.remove();
+    }, 500); // Assuming the transition duration is 0.5 seconds
+  }, 10000); // Duration to show the toast
 }
 
-// Call showError function with an error message automatically
-showError("This is an error message!");
+// Example: Call displayToast function with different messages
+// displayToast("This is an error message!");
+// setTimeout(() => {
+//   displayToast("Another error occurred!");
+//   displayToast("Yet another error!");
+// }, 2000); // Simulate a delay before showing multiple messages
+// setTimeout(() => {
+//   displayToast("And one more error!");
+// }, 5000); // Simulate a delay before showing the next message
