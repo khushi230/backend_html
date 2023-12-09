@@ -9,6 +9,7 @@ const otherContainer = document.getElementById("value-container");
 const browseButton = document.getElementById("browse-button");
 const fileInput = document.getElementById("file-input");
 const uploadButton = document.getElementById("upload-button");
+const printButton = document.getElementById("print-button");
 
 // Data for the dropdown options,
 const data1 = ["Option 1", "Option 2", "Option 3", "Option 4"];
@@ -198,3 +199,17 @@ setTimeout(() => {
 setTimeout(() => {
   displayToast("And one more error!");
 }, 5000); // Simulate a delay before showing the next message
+
+function printImage(imagePath) {
+  printJS({
+    printable: imagePath,
+    type: "image",
+    header: "image",
+    imageStyle: "width:50%;",
+  });
+}
+
+printButton.addEventListener("click", () => {
+  console.log("Print button clicked");
+  printImage("./assets/printer.jpg");
+});
